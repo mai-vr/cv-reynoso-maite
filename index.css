@@ -16,8 +16,6 @@
 
     --sky-500: #00a6f4;
 
-    --orange-500: #ff6900;
-
     --purple-700: #6e11b0;
     --purple-500: #ad46ff;
     --purple-300: #dab2ff;
@@ -31,15 +29,12 @@
     --red-950: #460809;
     --red-700-rgb: rgb(193, 0, 7, 0.3);
 
-    /* --gray-rgb: rgb(74, 85, 101, 0.3); */
-
-    --font-title: 'Ubuntu', sans-serif;
-    --font-text: 'Inter', sans-serif;
+    --font-title: 'UbuntuCustom', sans-serif;
+    --font-text: 'InterCustom', sans-serif;
 }
 
 body {
     background: linear-gradient(135deg, var(--gray-100), var(--purple-700));
-    /* overflow-x: hidden; */
 }
 
 main {
@@ -643,4 +638,25 @@ footer {
     .contacto-form form button {
         font-size: 1rem;
     }
+}
+
+@font-face {
+    font-family: 'InterCustom';
+    src: url('./assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UbuntuCustom';
+    src: url('./assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UbuntuCustom';
+    src: url('./assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
