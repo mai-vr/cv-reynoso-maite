@@ -58,7 +58,7 @@ function showData(index) {
             ${info.description}
         </p>
         <div class="job-footer">
-            <a href=${info.webSite} target="_blank">Oficial web site</a>
+            <a href=${info.webSite} target="_blank" rel="noopener noreferrer">Oficial web site</a>
             <a href="mailto:maitereynosov@gmail.com">Contact</a>
         </div>
     </div>
