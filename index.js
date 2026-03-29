@@ -44,10 +44,10 @@ function showData(index) {
     $content.innerHTML = `
     <div class="job-data">
         <div class="job-title">
-            <h2>
+            <h2 class="job-company">
                 ${info.company}
             </h2>
-            <p>
+            <p class="job-years">
                 ${info.years}
             </p>
         </div>
@@ -58,8 +58,8 @@ function showData(index) {
             ${info.description}
         </p>
         <div class="job-footer">
-            <a href=${info.webSite} target="_blank" rel="noopener noreferrer">Oficial web site</a>
-            <a href="mailto:maitereynosov@gmail.com">Contact</a>
+            <a href=${info.webSite} target="_blank" class="job-link" rel="noopener noreferrer">Oficial web site</a>
+            <a href="mailto:maitereynosov@gmail.com" class="job-link">Contact</a>
         </div>
     </div>
     `
