@@ -6,40 +6,37 @@
 }
 
 :root {
-    --gray-800: #1e2939;
-    --gray-600: #4a5565;
-    --gray-100: #e5e7eb;
+    --title-color: #1e2939;
+    --nav-links: #364153;
+    --text-color:#4a5565;
+    --button-bg: #e5e7eb;   
 
-    --gray-100-rgb: rgb(229, 231, 235, 0.3);
+    --footer-bg: #1e1a4d;
 
-    --blue-700: #003159;
+    --skills-bg: rgb(229, 231, 235, 0.3);
 
-    --sky-500: #00a6f4;
+    --nav-hover: #00a6f4;
 
-    --orange-500: #ff6900;
+    --body-gray-bg: #f8fafc;
+    --body-purple-bg: #59168b;
+    --subtitle-purple: #6e11b0;    
+    --button-border: #ad46ff;
+    --button-hover: #dab2ff;
 
-    --purple-700: #6e11b0;
-    --purple-500: #ad46ff;
-    --purple-300: #dab2ff;
+    --success-bg: #dcfce7;
+    --success-border: #008235;
 
-    --green-100: #dcfce7;
-    --green-700: #008235;
-    --green-800: #026630;
+    --success-bg-rgb: rgb(220, 252, 231, 0.5);
 
-    --green-100-rgb: rgb(220, 252, 231, 0.5);
+    --error-font: #460809;
+    --error-bg: rgb(193, 0, 7, 0.3);
 
-    --red-950: #460809;
-    --red-700-rgb: rgb(193, 0, 7, 0.3);
-
-    /* --gray-rgb: rgb(74, 85, 101, 0.3); */
-
-    --font-title: 'Ubuntu', sans-serif;
-    --font-text: 'Inter', sans-serif;
+    --font-title: 'UbuntuCustom', sans-serif;
+    --font-text: 'InterCustom', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, var(--gray-100), var(--purple-700));
-    /* overflow-x: hidden; */
+    background: linear-gradient(135deg, var(--body-gray-bg), var(--body-purple-bg));   
 }
 
 main {
@@ -52,11 +49,18 @@ section {
 }
 
 h2 {
+    font-family: var(--font-title);
     font-size: 2rem;
+    color: var(--title-color);
 }
 
 h4 {
     font-size: 1.5rem;
+    color: var(--subtitle-purple);
+}
+
+p, a {
+    color: var(--nav-links);
 }
 
 img {
@@ -79,24 +83,24 @@ header nav{
     align-items: center;
     padding: 0.75rem;
     gap: 2rem;    
-    background: rgba(var(--gray-100));
+    background: rgba(var(--button-bg)); 
     backdrop-filter: blur(10px);
-    border: 1px solid var(--gray-600);
+    border: 1px solid var(--text-color);
     border-radius: 5rem;
 }
 
-header nav a {
+header nav .nav-links {
     text-decoration: none;
-    color: var(--gray-600);
+    color: var(--text-color);
     transition: all 0.2s;
 }
 
-header nav a:hover {
-    color: var(--sky-500);
+header nav .nav-links:hover {
+    color: var(--nav-hover);
 }
 
 /* Sección presentación general. */
-section.presentacion {
+section.presentation {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,76 +109,74 @@ section.presentacion {
     gap: 1rem;
 }
 
-.presentacion .presentacion-foto {
+.presentation .presentation-photo {
     display: flex;
     align-items: center;
     gap: 2rem;
     margin-top: 0rem;
 }
 
-.presentacion-foto img {
+.presentation-photo img {
     width: 100px;
     height: 100px;
     border-radius: 100%;
 }
 
-.presentacion-foto a {
+.presentation-photo .work-btn {
     text-decoration: none;
     font-size: 13px;
-    color: var(--green-800);
+    color: var(--success-border);
     padding: 5px;
     border-radius: 20px;
-    background-color: var(--green-100);
-    border: 1.5px solid var(--green-700);
+    background-color: var(--success-bg);
+    border: 1.5px solid var(--success-border);
 }
 
-.presentacion h1 {
+.presentation h1 {
     font-family: var(--font-title);
     font-size: 37px;
+    color: var(--title-color);
 }
 
-.presentacion p {
+.presentation p {
     width: 700px;
     overflow-wrap: break-word;
     font-size: 17px;
 }
 
-.presentacion .presentacion-btns {
+.presentation .presentation-btns {
     display: flex;
     gap: 1rem;
 }
 
-.presentacion .presentacion-contacto {
+.presentation .presentation-contact {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     padding: 0.2rem 0.5rem;
-    background-color: var(--gray-100);
+    background-color: var(--button-bg); 
     border-radius: 20px;
-    border: 1.5px solid var(--purple-500);
+    border: 1.5px solid var(--button-border);
     transition: all 0.2s;
 }
 
-.presentacion .presentacion-contacto:hover {
+.presentation .presentation-contact:hover {
     cursor: pointer;
-    background-color: var(--purple-300);
-    /* border: 1.5px solid var(--gray-800); */
+    background-color: var(--button-hover);
 }
 
-.presentacion .presentacion-contacto a {
+.presentation .presentation-contact .contact-link {
     text-decoration: none;
-    color: var(--gray-800);
-    font-weight: 500;
 }
 
-.presentacion .presentacion-contacto svg {
+.presentation .presentation-contact svg {
     width: 25px;
     height: 25px;
 }
 
 /* Secciones secundarias - estilos generales. */
-.seccion-titulo {
+.section-title {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -182,17 +184,13 @@ section.presentacion {
     margin-bottom: 3rem;
 }
 
-.seccion-titulo svg {
+.section-title svg {
     width: 37px;
     height: 37px;
 }
 
-.seccion-titulo h2 {
-    font-family: var(--font-title);
-}
-
 /* Sección experiencia laboral. */
-.experiencia-tarjeta {
+.experience-card {
     display: grid;
     grid-template-columns: 200px 1fr;
     gap: 4rem;
@@ -202,13 +200,13 @@ section.presentacion {
     padding: 0rem 4rem;
 }
 
-.experiencia-menu {
+.experience-menu {
     list-style: none;
     display: flex;
     flex-direction: column;
 }
 
-.experiencia-menu li button {
+.experience-menu .job-item .job-btn {
     width: 200px;
     background: none;
     border: none;
@@ -221,86 +219,76 @@ section.presentacion {
     border-radius: 5px;
 }
 
-.experiencia-menu li button:hover {
-    border-right: 4px solid var(--purple-500);
-    background-color: var(--gray-100-rgb);
+.experience-menu .job-item .job-btn:hover {
+    border-right: 4px solid var(--button-border);
+    background-color: var(--button-bg); 
     cursor: pointer;
 }
 
-.experiencia-menu li button:focus {
-    border-right: 4px solid var(--purple-500);
-    background-color: var(--gray-100-rgb);
+.experience-menu .job-item .job-btn:focus {
+    border-right: 4px solid var(--button-border);
+    background-color: var(--button-bg); 
 }
 
-.trabajo-informacion {
+.job-data {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     /* padding-left: 25px; */
 }
 
-.trabajo-titulo {
+.job-title {
     margin-bottom: 0.75rem;
 }
 
-.trabajo-titulo h2 {
+.job-title .job-company {
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 0.5rem;
     font-family: var(--font-title);
-    color: var(--gray-800);
+    /* color: var(--title-color); */
     /* font-size: 27px; */
 }
 
-.trabajo-titulo p {
+.job-title .job-years {
     margin-bottom: 0.5rem;
-    color: var(--gray-600);
 }
 
-.trabajo-informacion h4 {
-    color: var(--purple-700);
-}
-
-.trabajo-informacion p {
-    font-size: 17px;
-    color: var(--gray-800);
-}
-
-.trabajo-footer {
+.job-footer {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-.trabajo-footer a {
+.job-footer .job-link {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
-    background-color: var(--gray-100);
+    background-color: var(--button-bg); 
     border-radius: 10px;
-    border: 1.5px solid var(--purple-500);
-    color: var(--gray-800);
+    border: 1.5px solid var(--button-border);
+    /* color: var(--title-color); */
     transition: all 0.2s;
 }
 
-.trabajo-footer a:hover {
-    background-color: var(--purple-300);
+.job-footer .job-link:hover {
+    background-color: var(--button-hover);
 }
 
 /* Sección habilidades. */
-#habilidades {
+#skills {
     padding-bottom: 0rem;
 }
 
-.habilidades-contenido {
+.skills-content {
     display: grid;
     grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
 }
 
-.habilidades-contenido div {
+.skills-content .skill-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -308,116 +296,111 @@ section.presentacion {
     gap: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: var(--gray-100-rgb);
-    border: 1.5px solid var(--gray-100);
+    background-color: var(--skills-bg);
+    border: 1.5px solid var(--button-bg);   
+    font-size: 17px;
     transition: all 0.2s;
 }
 
-.habilidades-contenido div:hover {
+.skills-content .skill-card:hover {
     transform: translateY(-8px);
 }
 
-.habilidades-contenido div svg {
+.skills-content .skill-card svg {
     width: 40px;
     height: 40px;
 }
 
-.habilidades-contenido div {
-    font-size: 17px;
-}
-
 /* Sección proyectos. */
-#proyectos {
+#projects {
     padding-bottom: 0rem;
 }
-.proyecto {
+.project {
     display: grid;
     grid-template-columns: 450px 1fr;
     align-items: start;
     gap: 2.5rem;
 }
 
-.proyecto img {
+.project .project-img {
     width: 450px;
     height: auto;
     border-radius: 10px;
 }
 
-.proyecto-desc {
+.project-description {
     margin-bottom: 5rem;
 }
 
-.proyecto-desc h4{
+.project-description .project-title{
+    color: var(--title-color);
     margin-bottom: 1.5rem;
 }
 
-.proyecto-desc .proyecto-lenguajes {
+.project-description .project-languages {
     list-style: none;
     display: flex;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
 }
 
-.proyecto-lenguajes li {
+.project-languages .language-item {
     display: flex;
     align-items: center;
     justify-content: start;
     padding: 5px 20px 5px 5px;
     gap: 0.5rem;
-    background-color: var(--purple-700);
-    color: var(--gray-100);
+    background-color: var(--body-purple-bg);
+    color: var(--body-gray-bg);    
     border-radius: 20px;
     font-size: 0.875rem;
 }
 
-.proyecto-lenguajes li svg{
+.project-languages .language-item svg{
     width: 20px;
     height: 20px;
 }
 
-.proyecto-desc p {
-    color: var(--gray-800);
+.project-description .project-desc {
     margin-bottom: 1.75rem;
 }
 
-.proyecto-info {
+.project-data {
     display: flex;
     gap: 1rem;
 }
 
-.proyecto-info svg {
+.project-data svg {
     width: 25px;
     height: 25px;
 }
 
-.proyecto-info a {
+.project-data .project-link {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
-    background-color: var(--gray-100);
+    background-color: var(--button-bg); 
     border-radius: 10px;
-    border: 1.5px solid var(--purple-500);
-    color: var(--gray-800);
+    border: 1.5px solid var(--button-border);
     transition: all 0.2s;
 }
 
-.proyecto-info a:hover {
-    background-color: var(--purple-300);
+.project-data .project-link:hover {
+    background-color: var(--button-hover);
 }
 
 /* Sección contacto */
-#contacto {
+#contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.contacto-form {
+.contact-form {
     width: 400px;
-    background-color: var(--dark-800);
     padding: 20px;
     border-radius: 16px;
     display: flex;
@@ -426,59 +409,56 @@ section.presentacion {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.contacto-form form {
+.contact-form .form-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.contacto-form form input,
-.contacto-form form textarea {
+.contact-form .form-content .form-input {
     padding: 10px;
     border-radius: 10px;
-    border: 2px solid var(--purple-700);
-    background-color: var(--gray-100);
-    color: var(--grey-600);
+    border: none;
+    background-color: var(--button-bg); 
     font-size: 15px;
     outline: none;
 }
 
-.contacto-form form input:focus,
-.contacto-form form textarea:focus {
-    outline: 2px solid var(--purple-700);
+.contact-form .form-content .form-input:focus {
+    outline: 2px solid var(--nav-hover);    
 }
 
-.contacto-form form button {
+.contact-form .form-content .send-btn {
     padding: 0.5rem 0.75rem;
-    background: linear-gradient(135deg, var(--purple-700), var(--sky-500));
+    background: linear-gradient(135deg, var(--subtitle-purple), var(--nav-hover));       
     border-radius: 10px;
     border: none;
-    color: var(--gray-100);
+    color: var(--body-gray-bg);    
     font-size: 1.2rem;
     transition: all 0.2s;
 }
 
-.contacto-form form button:hover {
+.contact-form .form-content .send-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(154, 58, 228, 0.4);
     cursor: pointer;
 }
 
-.contacto-form form .error-message {
-    background-color: var(--red-700-rgb);
+.contact-form .form-content .error-message {
+    background-color: var(--error-bg);
     border-radius: 10px;
-    color: var(--red-950);
+    color: var(--error-font);
     padding: 5px;
 }
 
-.contacto-form .success-message {
+.contact-form .success-message {
     font-size: 13px;
-    color: var(--green-800);
+    color: var(--success-border);
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--green-100);
-    border: 1.5px solid var(--green-700);
+    background-color: var(--success-bg);
+    border: 1.5px solid var(--success-border);
 }
 
 /* Footer */
@@ -487,8 +467,11 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background-color: var(--gray-800);
-    color: var(--gray-100);
+    background-color: var(--footer-bg);  
+}
+
+footer p {
+    color: var(--body-gray-bg);
 }
 
 /* Propiedades responsive */
@@ -508,65 +491,67 @@ footer {
         padding: 0.6rem;
     }
 
-    .presentacion p {
+    .presentation p {
         width: 100%;
         font-size: 16px;
     }
 
-    .presentacion h1 {
+    .presentation h1 {
         font-size: 2.4rem;
     }
 
-    .presentacion-foto {
+    .presentation-photo {
         gap: 1rem;
     }
 
-    .presentacion-foto img {
+    .presentation-photo img {
         width: 90px;
         height: 90px;
     }
 
-    .experiencia-tarjeta {
+    .experience-card {
         display: block;
         padding: 0 0.5rem;
     }
 
-    .experiencia-menu {
+    .experience-menu {
         display: flex;
         flex-direction: row;
         overflow-x: auto;
         gap: 0.5rem;
         margin-bottom: 1rem;
-        background-color: var(--gray-100);
+        background-color: var(--button-bg); 
+
         border-radius: 10px;
     }
 
-    .experiencia-menu li button {
+    .experience-menu li button {
         min-width: 120px;
         padding: 1rem 0.75rem;
         font-size: 0.95rem;
     }
 
-    .experiencia-menu li button:focus {
-        background-color: var(--purple-300);
+    .experience-menu li button:focus {
+        background-color: var(--button-hover);
+
         border: none;
     }
 
-    .trabajo-titulo h2 {
+    .job-title h2 {
         font-size: 1.25rem;
     }
 
-    .proyecto {
+    .project {
         grid-template-columns: 1fr;
         padding: 0.5rem;
     }
 
-    .proyecto img {
+    .project img {
         width: 100%;
         max-width: 100%;
     }
 
-    .contacto-form {
+    .contact-form {
         width: 100%;
         max-width: 450px;
         margin: 0 auto;
@@ -575,7 +560,8 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        background: linear-gradient(135deg, var(--gray-100), var(--purple-700));
+        background: linear-gradient(135deg, var(--button-bg), var(--subtitle-purp));   
+
     }
 
     main {
@@ -586,61 +572,75 @@ footer {
         display: none;
     }
 
-    .presentacion {
+    .presentation {
         align-items: center;
         text-align: center;
     }
 
-    .presentacion-foto {
+    .presentation-photo {
         flex-direction: column;
         align-items: start;
         justify-content: center;
     }
 
-    .presentacion h1 {
+    .presentation h1 {
         font-size: 2rem;
     }
 
-    .presentacion p {
+    .presentation p {
         width: 100%;
         font-size: 15px;
     }
 
-    .presentacion .presentacion-btns {
+    .presentation .presentation-btns {
         flex-direction: column;
         width: 100%;
     }
 
-    .presentacion .presentacion-contacto {
+    .presentation .presentation-contact {
         width: 100%;
         justify-content: center;
     }
 
-    .habilidades-contenido {
+    .skills-content {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
-    .proyecto-info,
-    .trabajo-footer {
+    .project-data,
+    .job-footer {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .proyecto-lenguajes {
+    .project-languages {
         flex-wrap: wrap;
     }
 
-    .contacto-form {
+    .contact-form {
         box-shadow: none;
         border: 1px solid rgba(0,0,0,0.1);
     }
 
-    .contacto-form form input,
-    .contacto-form form textarea {
+    .contact-form form input,
+    .contact-form form textarea {
         font-size: 14px;
     }
 
-    .contacto-form form button {
+    .contact-form form button {
         font-size: 1rem;
     }
+}
+
+@font-face {
+    font-family: 'InterCustom';
+    src: url('./assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UbuntuCustom';
+    src: url('./assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
