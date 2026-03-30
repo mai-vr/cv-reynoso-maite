@@ -1,90 +1,90 @@
-const $items = document.querySelectorAll('.experiencia-menu li')
-const $contenido = document.getElementById('experiencia-contenido')
-const $nombreInput = document.getElementById('nombre')
+const $items = document.querySelectorAll('.experience-menu li')
+const $content = document.getElementById('experience-content')
+const $nameInput = document.getElementById('name')
 const $emailInput = document.getElementById('email')
-const $mensajeInput = document.getElementById('mensaje')
+const $messageInput = document.getElementById('message')
 const $form = document.querySelector('form')
 const $error = document.querySelectorAll('.error-message')
-const $exito = document.querySelector('.success-message')
+const $success = document.querySelector('.success-message')
 
 // Información en la sección 'experiencia'.
 const data = [
     {
-        empresa: 'Mercado Libre',
-        años: '2025 - actualidad',
-        cargo: 'Frontend developer',
-        descripcion: 'Trabajé en Mercado Libre formando parte del equipo de desarrollo web, donde me encargaba de crear y mantener interfaces de usuario utilizando tecnologías como HTML, CSS y JavaScript.',
-        sitioWeb: 'https://www.mercadolibre.com.ar/',
+        company: 'Mercado Libre',
+        years: '2025 - now',
+        role: 'Frontend developer',
+        description: 'Worked at Mercado Libre as part of the web development team, responsible for creating and maintaining user interfaces using HTML, CSS, and JavaScript.',
+        webSite: 'https://www.mercadolibre.com.ar/',
     },
     {
-        empresa: 'Accenture',
-        años: '2024 - 2025',
-        cargo: 'Frontend developer',
-        descripcion: 'Trabajé en Accenture como desarrollador frontend junior, participando en el desarrollo de interfaces web para clientes de distintos sectores.',
-        sitioWeb: 'https://www.accenture.com/ar-es'
+        company: 'Accenture',
+        years: '2024 - 2025',
+        role: 'Frontend developer',
+        description: 'Collaborated as a Junior Frontend Developer at Accenture, contributing to the development of web interfaces for clients in diverse sectors.',
+        webSite: 'https://www.accenture.com/ar-es'
     },
     {
-        empresa: 'Pinterest',
-        años: '2023 - 2024',
-        cargo: 'Backend developer',
-        descripcion: 'Trabajé en Pinterest como backend developer, desarrollando y manteniendo APIs y servicios escalables.',
-        sitioWeb: 'https://ar.pinterest.com/'
+        company: 'Pinterest',
+        years: '2023 - 2024',
+        role: 'Backend developer',
+        description: 'Worked at Pinterest as a Backend Developer, developing and maintaining scalable APIs and services. I also focused on optimizing database queries to improve platform performance and data retrieval speeds.',
+        webSite: 'https://ar.pinterest.com/'
     }
 ]
 
 $items.forEach((item, index) => {
     item.addEventListener('click', () => {
-        mostrarData(index)
+        showData(index)
     })
 })
 
-function mostrarData(index) {
+function showData(index) {
     const info = data[index]
     
-    $contenido.innerHTML = `
-    <div class="trabajo-informacion">
-        <div class="trabajo-titulo">
+    $content.innerHTML = `
+    <div class="job-data">
+        <div class="job-title">
             <h2>
-                ${info.empresa}
+                ${info.company}
             </h2>
             <p>
-                ${info.años}
+                ${info.years}
             </p>
         </div>
         <h4>
-            ${info.cargo}
+            ${info.role}
         </h4>
         <p>
-            ${info.descripcion}
+            ${info.description}
         </p>
-        <div class="trabajo-footer">
-            <a href=${info.sitioWeb} target="_blank">Sitio web oficial</a>
-            <a href="mailto:maitereynosov@gmail.com">Contactate</a>
+        <div class="job-footer">
+            <a href=${info.webSite} target="_blank" rel="noopener noreferrer">Oficial web site</a>
+            <a href="mailto:maitereynosov@gmail.com">Contact</a>
         </div>
     </div>
     `
 }
-mostrarData(0)
+showData(0)
 
 // Formulario de contacto.
-const enviarFormulario = async (event) => {
+const sendForm = async (event) => {
     event.preventDefault()
 
     $error.forEach(e => e.style.display = 'none')
-    $exito.style.display = 'none'
+    $success.style.display = 'none'
 
-    const nombre = $nombreInput.value
+    const name = $nameInput.value
     const email = $emailInput.value
-    const mensaje = $mensajeInput.value
+    const message = $messageInput.value
 
-    console.log(nombre, email, mensaje)
-    if (!nombre) {
+    console.log(name, email, message)
+    if (!name) {
         $error[0].style.display = 'block'
         return
     } else if (!email) {
         $error[1].style.display = 'flex'
         return
-    } else if (!mensaje) {
+    } else if (!message) {
         $error[2].style.display = 'flex'
         return
     }
@@ -105,17 +105,17 @@ const enviarFormulario = async (event) => {
         const result = await response.json();
 
         if (result.success) {
-            $exito.style.display = 'flex';
+            $success.style.display = 'flex';
             $form.reset();
         }
     } catch (error) {
         console.log(error)
     }
 
-    $exito.style.display = 'flex'
+    $success.style.display = 'flex'
     $form.reset()
 }
 
 $error.forEach(e => e.style.display = 'none')
-$exito.style.display = 'none'
-$form.addEventListener('submit', enviarFormulario)
+$success.style.display = 'none'
+$form.addEventListener('submit', sendForm)
