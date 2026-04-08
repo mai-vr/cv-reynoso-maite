@@ -63,7 +63,7 @@ img {
     width: 50px;
 }
 
-header {
+.nav-bar-header {
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -71,7 +71,7 @@ header {
     margin-top: 0.5rem;
 }
 
-header nav{
+.nav-bar-header .nav-bar{
     width: fit-content;
     margin: 0 auto;
     display: flex;
@@ -85,13 +85,13 @@ header nav{
     border-radius: 5rem;
 }
 
-header nav a {
+.nav-bar-header .nav-bar .nav-links {
     text-decoration: none;
     color: var(--gray-600);
     transition: all 0.2s;
 }
 
-header nav a:hover {
+.nav-bar-header .nav-bar .nav-links:hover {
     color: var(--sky-500);
 }
 
@@ -112,13 +112,13 @@ section.presentacion {
     margin-top: 0rem;
 }
 
-.presentacion-foto img {
+.presentacion-foto .profile-photo {
     width: 100px;
     height: 100px;
     border-radius: 100%;
 }
 
-.presentacion-foto a {
+.presentacion-foto .available-banner {
     text-decoration: none;
     font-size: 13px;
     color: var(--green-800);
@@ -128,12 +128,12 @@ section.presentacion {
     border: 1.5px solid var(--green-700);
 }
 
-.presentacion h1 {
+.presentacion .personal-name {
     font-family: var(--font-title);
     font-size: 37px;
 }
 
-.presentacion p {
+.presentacion .presentation-text {
     width: 700px;
     overflow-wrap: break-word;
     font-size: 17px;
@@ -162,13 +162,13 @@ section.presentacion {
     /* border: 1.5px solid var(--gray-800); */
 }
 
-.presentacion .presentacion-contacto a {
+.presentacion .presentacion-contacto .presentation-contact-btn {
     text-decoration: none;
     color: var(--gray-800);
     font-weight: 500;
 }
 
-.presentacion .presentacion-contacto svg {
+.presentacion .presentacion-contacto .presentation-contact-svg {
     width: 25px;
     height: 25px;
 }
@@ -182,12 +182,12 @@ section.presentacion {
     margin-bottom: 3rem;
 }
 
-.seccion-titulo svg {
+.seccion-titulo .section-icon {
     width: 37px;
     height: 37px;
 }
 
-.seccion-titulo h2 {
+.seccion-titulo .section-title-h2 {
     font-family: var(--font-title);
 }
 
@@ -208,7 +208,7 @@ section.presentacion {
     flex-direction: column;
 }
 
-.experiencia-menu li button {
+.experiencia-menu .experience-item .experience-company {
     width: 200px;
     background: none;
     border: none;
@@ -221,13 +221,13 @@ section.presentacion {
     border-radius: 5px;
 }
 
-.experiencia-menu li button:hover {
+.experiencia-menu .experience-item .experience-company:hover {
     border-right: 4px solid var(--purple-500);
     background-color: var(--gray-100-rgb);
     cursor: pointer;
 }
 
-.experiencia-menu li button:focus {
+.experiencia-menu .experience-item .experience-company:focus {
     border-right: 4px solid var(--purple-500);
     background-color: var(--gray-100-rgb);
 }
@@ -243,7 +243,7 @@ section.presentacion {
     margin-bottom: 0.75rem;
 }
 
-.trabajo-titulo h2 {
+.trabajo-titulo .company-title {
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -252,16 +252,16 @@ section.presentacion {
     /* font-size: 27px; */
 }
 
-.trabajo-titulo p {
+.trabajo-titulo .company-working-years {
     margin-bottom: 0.5rem;
     color: var(--gray-600);
 }
 
-.trabajo-informacion h4 {
+.trabajo-informacion .job-role {
     color: var(--purple-700);
 }
 
-.trabajo-informacion p {
+.trabajo-informacion .job-role-description {
     font-size: 17px;
     color: var(--gray-800);
 }
@@ -272,7 +272,8 @@ section.presentacion {
     margin-top: 1rem;
 }
 
-.trabajo-footer a {
+.trabajo-footer .company-link, 
+.trabajo-footer .company-mail {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -285,7 +286,8 @@ section.presentacion {
     transition: all 0.2s;
 }
 
-.trabajo-footer a:hover {
+.trabajo-footer .company-link:hover,
+.trabajo-footer .company-mail:hover {
     background-color: var(--purple-300);
 }
 
@@ -300,7 +302,7 @@ section.presentacion {
     gap: 1rem;
 }
 
-.habilidades-contenido div {
+.habilidades-contenido .skills-languages {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -313,16 +315,16 @@ section.presentacion {
     transition: all 0.2s;
 }
 
-.habilidades-contenido div:hover {
+.habilidades-contenido .skills-languages:hover {
     transform: translateY(-8px);
 }
 
-.habilidades-contenido div svg {
+.habilidades-contenido .skills-languages .language-icon {
     width: 40px;
     height: 40px;
 }
 
-.habilidades-contenido div {
+.habilidades-contenido .skills-languages {
     font-size: 17px;
 }
 
@@ -337,7 +339,7 @@ section.presentacion {
     gap: 2.5rem;
 }
 
-.proyecto img {
+.proyecto .project-preview-image {
     width: 450px;
     height: auto;
     border-radius: 10px;
@@ -347,7 +349,7 @@ section.presentacion {
     margin-bottom: 5rem;
 }
 
-.proyecto-desc h4{
+.proyecto-desc .project-title{
     margin-bottom: 1.5rem;
 }
 
@@ -358,7 +360,7 @@ section.presentacion {
     margin-bottom: 0.75rem;
 }
 
-.proyecto-lenguajes li {
+.proyecto-lenguajes .project-language-item {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -370,12 +372,12 @@ section.presentacion {
     font-size: 0.875rem;
 }
 
-.proyecto-lenguajes li svg{
+.proyecto-lenguajes .project-language-item .project-language-icon {
     width: 20px;
     height: 20px;
 }
 
-.proyecto-desc p {
+.proyecto-desc .project-description-text {
     color: var(--gray-800);
     margin-bottom: 1.75rem;
 }
@@ -385,12 +387,12 @@ section.presentacion {
     gap: 1rem;
 }
 
-.proyecto-info svg {
+.proyecto-info .project-link-icon {
     width: 25px;
     height: 25px;
 }
 
-.proyecto-info a {
+.proyecto-info .project-link {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -403,7 +405,7 @@ section.presentacion {
     transition: all 0.2s;
 }
 
-.proyecto-info a:hover {
+.proyecto-info .project-link:hover {
     background-color: var(--purple-300);
 }
 
@@ -426,15 +428,15 @@ section.presentacion {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.contacto-form form {
+.contacto-form .message-form {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.contacto-form form input,
-.contacto-form form textarea {
+.contacto-form .message-form .form-input,
+.contacto-form .message-form .form-textarea {
     padding: 10px;
     border-radius: 10px;
     border: 2px solid var(--purple-700);
@@ -444,12 +446,12 @@ section.presentacion {
     outline: none;
 }
 
-.contacto-form form input:focus,
-.contacto-form form textarea:focus {
+.contacto-form .message-form .form-input:focus,
+.contacto-form .message-form .form-textarea:focus {
     outline: 2px solid var(--purple-700);
 }
 
-.contacto-form form button {
+.contacto-form .message-form .form-submit-btn {
     padding: 0.5rem 0.75rem;
     background: linear-gradient(135deg, var(--purple-700), var(--sky-500));
     border-radius: 10px;
@@ -459,13 +461,13 @@ section.presentacion {
     transition: all 0.2s;
 }
 
-.contacto-form form button:hover {
+.contacto-form .message-form .form-submit-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(154, 58, 228, 0.4);
     cursor: pointer;
 }
 
-.contacto-form form .error-message {
+.contacto-form .message-form .error-message {
     background-color: var(--red-700-rgb);
     border-radius: 10px;
     color: var(--red-950);
@@ -482,7 +484,7 @@ section.presentacion {
 }
 
 /* Footer */
-footer {
+.page-footer {
     display: flex;
     align-items: center;
     justify-content: center;
