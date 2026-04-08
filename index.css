@@ -6,30 +6,30 @@
 }
 
 :root {
-    --gray-800: #1e2939;
-    --gray-600: #4a5565;
-    --gray-100: #e5e7eb;
+    --text-primary-color: #1e2939;
+    --text-secondary-color: #4a5565;
+    --background-buttons-color: #e5e7eb;
 
-    --gray-100-rgb: rgb(229, 231, 235, 0.3);
+    --background-buttons-color-rgb: rgb(229, 231, 235, 0.3);
 
-    --blue-700: #003159;
+    --background-dark-color: #003159;
 
-    --sky-500: #00a6f4;
+    --form-button-color: #00a6f4;
 
-    --orange-500: #ff6900;
+    --highlight-text: #ff6900;
 
     --purple-700: #6e11b0;
-    --purple-500: #ad46ff;
-    --purple-300: #dab2ff;
+    --accent-color: #ad46ff;
+    --secondary-accent-color: #dab2ff;
 
-    --green-100: #dcfce7;
-    --green-700: #008235;
-    --green-800: #026630;
+    --success-alert-background: #dcfce7;
+    --success-alert-border: #008235;
+    --success-alert-text: #026630;
 
-    --green-100-rgb: rgb(220, 252, 231, 0.5);
+    --success-alert-background-rgb: rgb(220, 252, 231, 0.5);
 
-    --red-950: #460809;
-    --red-700-rgb: rgb(193, 0, 7, 0.3);
+    --error-alert-text: #460809;
+    --error-alert-background: rgb(193, 0, 7, 0.3);
 
     /* --gray-rgb: rgb(74, 85, 101, 0.3); */
 
@@ -38,7 +38,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, var(--gray-100), var(--purple-700));
+    background: linear-gradient(135deg, var(--background-buttons-color), var(--purple-700));
     /* overflow-x: hidden; */
 }
 
@@ -79,20 +79,20 @@ header nav{
     align-items: center;
     padding: 0.75rem;
     gap: 2rem;    
-    background: rgba(var(--gray-100));
+    background: rgba(var(--background-buttons-color));
     backdrop-filter: blur(10px);
-    border: 1px solid var(--gray-600);
+    border: 1px solid var(--text-secondary-color);
     border-radius: 5rem;
 }
 
 header nav a {
     text-decoration: none;
-    color: var(--gray-600);
+    color: var(--text-secondary-color);
     transition: all 0.2s;
 }
 
 header nav a:hover {
-    color: var(--sky-500);
+    color: var(--accent-color);
 }
 
 /* Sección presentación general. */
@@ -121,11 +121,11 @@ section.presentacion {
 .presentacion-foto a {
     text-decoration: none;
     font-size: 13px;
-    color: var(--green-800);
+    color: var(--success-alert-text);
     padding: 5px;
     border-radius: 20px;
-    background-color: var(--green-100);
-    border: 1.5px solid var(--green-700);
+    background-color: var(--success-alert-background);
+    border: 1.5px solid var(--success-alert-border);
 }
 
 .presentacion h1 {
@@ -150,21 +150,21 @@ section.presentacion {
     justify-content: center;
     gap: 0.5rem;
     padding: 0.2rem 0.5rem;
-    background-color: var(--gray-100);
+    background-color: var(--background-buttons-color);
     border-radius: 20px;
-    border: 1.5px solid var(--purple-500);
+    border: 1.5px solid var(--accent-color);
     transition: all 0.2s;
 }
 
 .presentacion .presentacion-contacto:hover {
     cursor: pointer;
-    background-color: var(--purple-300);
-    /* border: 1.5px solid var(--gray-800); */
+    background-color: var(--secondary-accent-color);
+    /* border: 1.5px solid var(--text-primary-color); */
 }
 
 .presentacion .presentacion-contacto a {
     text-decoration: none;
-    color: var(--gray-800);
+    color: var(--text-primary-color);
     font-weight: 500;
 }
 
@@ -222,14 +222,14 @@ section.presentacion {
 }
 
 .experiencia-menu li button:hover {
-    border-right: 4px solid var(--purple-500);
-    background-color: var(--gray-100-rgb);
+    border-right: 4px solid var(--accent-color);
+    background-color: var(--background-buttons-color-rgb);
     cursor: pointer;
 }
 
 .experiencia-menu li button:focus {
-    border-right: 4px solid var(--purple-500);
-    background-color: var(--gray-100-rgb);
+    border-right: 4px solid var(--accent-color);
+    background-color: var(--background-buttons-color-rgb);
 }
 
 .trabajo-informacion {
@@ -248,13 +248,13 @@ section.presentacion {
     font-weight: 500;
     margin-bottom: 0.5rem;
     font-family: var(--font-title);
-    color: var(--gray-800);
+    color: var(--text-primary-color);
     /* font-size: 27px; */
 }
 
 .trabajo-titulo p {
     margin-bottom: 0.5rem;
-    color: var(--gray-600);
+    color: var(--text-secondary-color);
 }
 
 .trabajo-informacion h4 {
@@ -263,7 +263,7 @@ section.presentacion {
 
 .trabajo-informacion p {
     font-size: 17px;
-    color: var(--gray-800);
+    color: var(--text-primary-color);
 }
 
 .trabajo-footer {
@@ -278,15 +278,15 @@ section.presentacion {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
-    background-color: var(--gray-100);
+    background-color: var(--background-buttons-color);
     border-radius: 10px;
-    border: 1.5px solid var(--purple-500);
-    color: var(--gray-800);
+    border: 1.5px solid var(--accent-color);
+    color: var(--text-primary-color);
     transition: all 0.2s;
 }
 
 .trabajo-footer a:hover {
-    background-color: var(--purple-300);
+    background-color: var(--secondary-accent-color);
 }
 
 /* Sección habilidades. */
@@ -308,8 +308,8 @@ section.presentacion {
     gap: 1rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: var(--gray-100-rgb);
-    border: 1.5px solid var(--gray-100);
+    background-color: var(--background-buttons-color-rgb);
+    border: 1.5px solid var(--background-buttons-color);
     transition: all 0.2s;
 }
 
@@ -365,7 +365,7 @@ section.presentacion {
     padding: 5px 20px 5px 5px;
     gap: 0.5rem;
     background-color: var(--purple-700);
-    color: var(--gray-100);
+    color: var(--background-buttons-color);
     border-radius: 20px;
     font-size: 0.875rem;
 }
@@ -376,7 +376,7 @@ section.presentacion {
 }
 
 .proyecto-desc p {
-    color: var(--gray-800);
+    color: var(--text-primary-color);
     margin-bottom: 1.75rem;
 }
 
@@ -396,15 +396,15 @@ section.presentacion {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0.75rem;
-    background-color: var(--gray-100);
+    background-color: var(--background-buttons-color);
     border-radius: 10px;
-    border: 1.5px solid var(--purple-500);
-    color: var(--gray-800);
+    border: 1.5px solid var(--accent-color);
+    color: var(--text-primary-color);
     transition: all 0.2s;
 }
 
 .proyecto-info a:hover {
-    background-color: var(--purple-300);
+    background-color: var(--secondary-accent-color);
 }
 
 /* Sección contacto */
@@ -438,7 +438,7 @@ section.presentacion {
     padding: 10px;
     border-radius: 10px;
     border: 2px solid var(--purple-700);
-    background-color: var(--gray-100);
+    background-color: var(--background-buttons-color);
     color: var(--grey-600);
     font-size: 15px;
     outline: none;
@@ -451,10 +451,10 @@ section.presentacion {
 
 .contacto-form form button {
     padding: 0.5rem 0.75rem;
-    background: linear-gradient(135deg, var(--purple-700), var(--sky-500));
+    background: linear-gradient(135deg, var(--purple-700), var(--form-button-color));
     border-radius: 10px;
     border: none;
-    color: var(--gray-100);
+    color: var(--background-buttons-color);
     font-size: 1.2rem;
     transition: all 0.2s;
 }
@@ -466,19 +466,19 @@ section.presentacion {
 }
 
 .contacto-form form .error-message {
-    background-color: var(--red-700-rgb);
+    background-color: var(--error-alert-background);
     border-radius: 10px;
-    color: var(--red-950);
+    color: var(--error-alert-text);
     padding: 5px;
 }
 
 .contacto-form .success-message {
     font-size: 13px;
-    color: var(--green-800);
+    color: var(--success-alert-text);
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--green-100);
-    border: 1.5px solid var(--green-700);
+    background-color: var(--success-alert-background);
+    border: 1.5px solid var(--success-alert-border);
 }
 
 /* Footer */
@@ -487,8 +487,8 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background-color: var(--gray-800);
-    color: var(--gray-100);
+    background-color: var(--text-primary-color);
+    color: var(--background-buttons-color);
 }
 
 /* Propiedades responsive */
@@ -537,7 +537,8 @@ footer {
         overflow-x: auto;
         gap: 0.5rem;
         margin-bottom: 1rem;
-        background-color: var(--gray-100);
+        background-color: var(--background-buttons-color);
+
         border-radius: 10px;
     }
 
@@ -548,7 +549,8 @@ footer {
     }
 
     .experiencia-menu li button:focus {
-        background-color: var(--purple-300);
+        background-color: var(--secondary-accent-color);
+
         border: none;
     }
 
@@ -575,7 +577,8 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        background: linear-gradient(135deg, var(--gray-100), var(--purple-700));
+        background: linear-gradient(135deg, var(--background-buttons-color), var(--purple-700));
+
     }
 
     main {
