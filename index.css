@@ -212,7 +212,7 @@ section.presentation {
     flex-direction: column;
 }
 
-.experiencia-menu .experience-item .experience-company {
+.experience-menu .experience-item .experience-company {
     width: 12.5rem;
     background: none;
     border: none;
@@ -225,13 +225,13 @@ section.presentation {
     border-radius: 0.3rem;
 }
 
-.experiencia-menu .experience-item .experience-company:hover {
+.experience-menu .experience-item .experience-company:hover {
     border-right: 0.25rem solid var(--accent-color);
     background-color: var(--success-alert-background-rgb);
     cursor: pointer;
 }
 
-.experiencia-menu .experience-item .experience-company:focus {
+.experience-menu .experience-item .experience-company:focus {
     border-right: 0.25rem solid var(--accent-color);
     background-color: var(--success-alert-background-rgb);
 }
@@ -381,7 +381,7 @@ section.presentation {
     height: 1.5rem;
 }
 
-.proyecto-desc .project-description-text {
+.project-description .project-description-text {
     color: var(--text-primary-color);
     margin-bottom: 1.75rem;
 }
@@ -409,7 +409,7 @@ section.presentation {
     transition: all 0.2s;
 }
 
-.proyecto-info .project-link:hover {
+.project-data .project-link:hover {
     background-color: var(--secondary-accent-color);
 }
 
@@ -553,7 +553,7 @@ section.presentation {
         font-size: 0.95rem;
     }
 
-    .experiencia-menu li button:focus {
+    .experience-menu li button:focus {
         background-color: var(--secondary-accent-color);
 
         border: none;
