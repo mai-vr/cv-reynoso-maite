@@ -63,7 +63,7 @@ img {
     width: 50px;
 }
 
-header {
+.nav-bar-header {
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -71,7 +71,7 @@ header {
     margin-top: 0.5rem;
 }
 
-header nav{
+.nav-bar-header .nav-bar{
     width: fit-content;
     margin: 0 auto;
     display: flex;
@@ -85,14 +85,19 @@ header nav{
     border-radius: 5rem;
 }
 
-header nav a {
+.nav-bar-header .nav-bar .nav-links {
     text-decoration: none;
     color: var(--text-secondary-color);
     transition: all 0.2s;
 }
 
+<<<<<<< HEAD
 header nav a:hover {
     color: var(--accent-color);
+=======
+.nav-bar-header .nav-bar .nav-links:hover {
+    color: var(--sky-500);
+>>>>>>> 4-css-classes
 }
 
 /* Sección presentación general. */
@@ -112,13 +117,21 @@ section.presentation {
     margin-top: 0rem;
 }
 
+<<<<<<< HEAD
 .presentation-photo img {
+=======
+.presentacion-foto .profile-photo {
+>>>>>>> 4-css-classes
     width: 100px;
     height: 100px;
     border-radius: 100%;
 }
 
+<<<<<<< HEAD
 .presentation-photo a {
+=======
+.presentacion-foto .available-banner {
+>>>>>>> 4-css-classes
     text-decoration: none;
     font-size: 13px;
     color: var(--success-alert-text);
@@ -128,12 +141,20 @@ section.presentation {
     border: 1.5px solid var(--success-alert-border);
 }
 
+<<<<<<< HEAD
 .presentation h1 {
+=======
+.presentacion .personal-name {
+>>>>>>> 4-css-classes
     font-family: var(--font-title);
     font-size: 37px;
 }
 
+<<<<<<< HEAD
 .presentation p {
+=======
+.presentacion .presentation-text {
+>>>>>>> 4-css-classes
     width: 700px;
     overflow-wrap: break-word;
     font-size: 17px;
@@ -162,13 +183,21 @@ section.presentation {
     /* border: 1.5px solid var(--text-primary-color); */
 }
 
+<<<<<<< HEAD
 .presentation .presentation-contact a {
+=======
+.presentacion .presentacion-contacto .presentation-contact-btn {
+>>>>>>> 4-css-classes
     text-decoration: none;
     color: var(--text-primary-color);
     font-weight: 500;
 }
 
+<<<<<<< HEAD
 .presentation .presentation-contact svg {
+=======
+.presentacion .presentacion-contacto .presentation-contact-svg {
+>>>>>>> 4-css-classes
     width: 25px;
     height: 25px;
 }
@@ -182,12 +211,20 @@ section.presentation {
     margin-bottom: 3rem;
 }
 
+<<<<<<< HEAD
 .section-title svg {
+=======
+.seccion-titulo .section-icon {
+>>>>>>> 4-css-classes
     width: 37px;
     height: 37px;
 }
 
+<<<<<<< HEAD
 .section-title h2 {
+=======
+.seccion-titulo .section-title-h2 {
+>>>>>>> 4-css-classes
     font-family: var(--font-title);
 }
 
@@ -208,7 +245,11 @@ section.presentation {
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 .experience-menu li button {
+=======
+.experiencia-menu .experience-item .experience-company {
+>>>>>>> 4-css-classes
     width: 200px;
     background: none;
     border: none;
@@ -221,6 +262,7 @@ section.presentation {
     border-radius: 5px;
 }
 
+<<<<<<< HEAD
 .experiencia-menu li button:hover {
     border-right: 4px solid var(--accent-color);
     background-color: var(--background-buttons-color-rgb);
@@ -230,6 +272,17 @@ section.presentation {
 .experiencia-menu li button:focus {
     border-right: 4px solid var(--accent-color);
     background-color: var(--background-buttons-color-rgb);
+=======
+.experiencia-menu .experience-item .experience-company:hover {
+    border-right: 4px solid var(--purple-500);
+    background-color: var(--gray-100-rgb);
+    cursor: pointer;
+}
+
+.experiencia-menu .experience-item .experience-company:focus {
+    border-right: 4px solid var(--purple-500);
+    background-color: var(--gray-100-rgb);
+>>>>>>> 4-css-classes
 }
 
 .job-data {
@@ -243,7 +296,11 @@ section.presentation {
     margin-bottom: 0.75rem;
 }
 
+<<<<<<< HEAD
 .job-title h2 {
+=======
+.trabajo-titulo .company-title {
+>>>>>>> 4-css-classes
     text-transform: uppercase;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -252,16 +309,28 @@ section.presentation {
     /* font-size: 27px; */
 }
 
+<<<<<<< HEAD
 .job-title p {
+=======
+.trabajo-titulo .company-working-years {
+>>>>>>> 4-css-classes
     margin-bottom: 0.5rem;
     color: var(--text-secondary-color);
 }
 
+<<<<<<< HEAD
 .job-data h4 {
     color: var(--purple-700);
 }
 
 .job-data p {
+=======
+.trabajo-informacion .job-role {
+    color: var(--purple-700);
+}
+
+.trabajo-informacion .job-role-description {
+>>>>>>> 4-css-classes
     font-size: 17px;
     color: var(--text-primary-color);
 }
@@ -272,7 +341,12 @@ section.presentation {
     margin-top: 1rem;
 }
 
+<<<<<<< HEAD
 .job-footer a {
+=======
+.trabajo-footer .company-link, 
+.trabajo-footer .company-mail {
+>>>>>>> 4-css-classes
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -285,8 +359,14 @@ section.presentation {
     transition: all 0.2s;
 }
 
+<<<<<<< HEAD
 .trabajo-footer a:hover {
     background-color: var(--secondary-accent-color);
+=======
+.trabajo-footer .company-link:hover,
+.trabajo-footer .company-mail:hover {
+    background-color: var(--purple-300);
+>>>>>>> 4-css-classes
 }
 
 /* Sección habilidades. */
@@ -300,7 +380,11 @@ section.presentation {
     gap: 1rem;
 }
 
+<<<<<<< HEAD
 .skills-content div {
+=======
+.habilidades-contenido .skills-languages {
+>>>>>>> 4-css-classes
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -313,16 +397,28 @@ section.presentation {
     transition: all 0.2s;
 }
 
+<<<<<<< HEAD
 .skills-content div:hover {
     transform: translateY(-8px);
 }
 
 .skills-content div svg {
+=======
+.habilidades-contenido .skills-languages:hover {
+    transform: translateY(-8px);
+}
+
+.habilidades-contenido .skills-languages .language-icon {
+>>>>>>> 4-css-classes
     width: 40px;
     height: 40px;
 }
 
+<<<<<<< HEAD
 .skills-content div {
+=======
+.habilidades-contenido .skills-languages {
+>>>>>>> 4-css-classes
     font-size: 17px;
 }
 
@@ -337,7 +433,11 @@ section.presentation {
     gap: 2.5rem;
 }
 
+<<<<<<< HEAD
 .project img {
+=======
+.proyecto .project-preview-image {
+>>>>>>> 4-css-classes
     width: 450px;
     height: auto;
     border-radius: 10px;
@@ -347,7 +447,11 @@ section.presentation {
     margin-bottom: 5rem;
 }
 
+<<<<<<< HEAD
 .project-description h4{
+=======
+.proyecto-desc .project-title{
+>>>>>>> 4-css-classes
     margin-bottom: 1.5rem;
 }
 
@@ -358,7 +462,11 @@ section.presentation {
     margin-bottom: 0.75rem;
 }
 
+<<<<<<< HEAD
 .project-languages li {
+=======
+.proyecto-lenguajes .project-language-item {
+>>>>>>> 4-css-classes
     display: flex;
     align-items: center;
     justify-content: start;
@@ -370,13 +478,22 @@ section.presentation {
     font-size: 0.875rem;
 }
 
+<<<<<<< HEAD
 .project-languages li svg{
+=======
+.proyecto-lenguajes .project-language-item .project-language-icon {
+>>>>>>> 4-css-classes
     width: 20px;
     height: 20px;
 }
 
+<<<<<<< HEAD
 .proyecto-desc p {
     color: var(--text-primary-color);
+=======
+.proyecto-desc .project-description-text {
+    color: var(--gray-800);
+>>>>>>> 4-css-classes
     margin-bottom: 1.75rem;
 }
 
@@ -385,12 +502,20 @@ section.presentation {
     gap: 1rem;
 }
 
+<<<<<<< HEAD
 .project-data svg {
+=======
+.proyecto-info .project-link-icon {
+>>>>>>> 4-css-classes
     width: 25px;
     height: 25px;
 }
 
+<<<<<<< HEAD
 .project-data a {
+=======
+.proyecto-info .project-link {
+>>>>>>> 4-css-classes
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -403,8 +528,13 @@ section.presentation {
     transition: all 0.2s;
 }
 
+<<<<<<< HEAD
 .proyecto-info a:hover {
     background-color: var(--secondary-accent-color);
+=======
+.proyecto-info .project-link:hover {
+    background-color: var(--purple-300);
+>>>>>>> 4-css-classes
 }
 
 /* Sección contacto */
@@ -426,15 +556,24 @@ section.presentation {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+<<<<<<< HEAD
 .contact-form form {
+=======
+.contacto-form .message-form {
+>>>>>>> 4-css-classes
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
+<<<<<<< HEAD
 .contact-form form input,
 .contact-form form textarea {
+=======
+.contacto-form .message-form .form-input,
+.contacto-form .message-form .form-textarea {
+>>>>>>> 4-css-classes
     padding: 10px;
     border-radius: 10px;
     border: 2px solid var(--purple-700);
@@ -444,12 +583,21 @@ section.presentation {
     outline: none;
 }
 
+<<<<<<< HEAD
 .contact-form form input:focus,
 .contact-form form textarea:focus {
     outline: 2px solid var(--purple-700);
 }
 
 .contact-form form button {
+=======
+.contacto-form .message-form .form-input:focus,
+.contacto-form .message-form .form-textarea:focus {
+    outline: 2px solid var(--purple-700);
+}
+
+.contacto-form .message-form .form-submit-btn {
+>>>>>>> 4-css-classes
     padding: 0.5rem 0.75rem;
     background: linear-gradient(135deg, var(--purple-700), var(--form-button-color));
     border-radius: 10px;
@@ -459,14 +607,23 @@ section.presentation {
     transition: all 0.2s;
 }
 
+<<<<<<< HEAD
 .contact-form form button:hover {
+=======
+.contacto-form .message-form .form-submit-btn:hover {
+>>>>>>> 4-css-classes
     transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(154, 58, 228, 0.4);
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .contacto-form form .error-message {
     background-color: var(--error-alert-background);
+=======
+.contacto-form .message-form .error-message {
+    background-color: var(--red-700-rgb);
+>>>>>>> 4-css-classes
     border-radius: 10px;
     color: var(--error-alert-text);
     padding: 5px;
@@ -482,7 +639,7 @@ section.presentation {
 }
 
 /* Footer */
-footer {
+.page-footer {
     display: flex;
     align-items: center;
     justify-content: center;

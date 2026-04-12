@@ -41,6 +41,7 @@ $items.forEach((item, index) => {
 function showData(index) {
     const info = data[index]
     
+<<<<<<< HEAD
     $content.innerHTML = `
     <div class="job-data">
         <div class="job-title">
@@ -60,6 +61,27 @@ function showData(index) {
         <div class="job-footer">
             <a href=${info.webSite} target="_blank">Oficial web site</a>
             <a href="mailto:maitereynosov@gmail.com">Contact</a>
+=======
+    $contenido.innerHTML = `
+    <div class="trabajo-informacion">
+        <div class="trabajo-titulo">
+            <h2 class="company-title">
+                ${info.empresa}
+            </h2>
+            <p class="company-working-years">
+                ${info.años}
+            </p>
+        </div>
+        <h4 class="job-role">
+            ${info.cargo}
+        </h4>
+        <p class="job-role-description">
+            ${info.descripcion}
+        </p>
+        <div class="trabajo-footer">
+            <a href=${info.sitioWeb} target="_blank" class="company-link">Sitio web oficial</a>
+            <a href="mailto:maitereynosov@gmail.com" class="company-mail">Contactate</a>
+>>>>>>> 4-css-classes
         </div>
     </div>
     `
