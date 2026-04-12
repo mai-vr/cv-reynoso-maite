@@ -41,7 +41,7 @@ $items.forEach((item, index) => {
 function showData(index) {
     const info = data[index]
     
-    $contenido.innerHTML = `
+    $content.innerHTML = `
     <div class="job-data">
         <div class="job-title">
             <h2 class="company-title">
@@ -57,7 +57,7 @@ function showData(index) {
         <p class="job-role-description">
             ${info.description}
         </p>
-        <div class="trabajo-footer">
+        <div class="job-footer">
             <a href=${info.webSite} target="_blank" class="company-link">Oficial web</a>
             <a href="mailto:maitereynosov@gmail.com" class="company-mail">Contact</a>
         </div>
