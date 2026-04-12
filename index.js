@@ -41,47 +41,25 @@ $items.forEach((item, index) => {
 function showData(index) {
     const info = data[index]
     
-<<<<<<< HEAD
-    $content.innerHTML = `
+    $contenido.innerHTML = `
     <div class="job-data">
         <div class="job-title">
-            <h2>
+            <h2 class="company-title">
                 ${info.company}
             </h2>
-            <p>
+            <p class="company-working-years">
                 ${info.years}
             </p>
         </div>
-        <h4>
+        <h4 class="job-role">
             ${info.role}
         </h4>
-        <p>
+        <p class="job-role-description">
             ${info.description}
         </p>
-        <div class="job-footer">
-            <a href=${info.webSite} target="_blank">Oficial web site</a>
-            <a href="mailto:maitereynosov@gmail.com">Contact</a>
-=======
-    $contenido.innerHTML = `
-    <div class="trabajo-informacion">
-        <div class="trabajo-titulo">
-            <h2 class="company-title">
-                ${info.empresa}
-            </h2>
-            <p class="company-working-years">
-                ${info.años}
-            </p>
-        </div>
-        <h4 class="job-role">
-            ${info.cargo}
-        </h4>
-        <p class="job-role-description">
-            ${info.descripcion}
-        </p>
         <div class="trabajo-footer">
-            <a href=${info.sitioWeb} target="_blank" class="company-link">Sitio web oficial</a>
-            <a href="mailto:maitereynosov@gmail.com" class="company-mail">Contactate</a>
->>>>>>> 4-css-classes
+            <a href=${info.webSite} target="_blank" class="company-link">Oficial web</a>
+            <a href="mailto:maitereynosov@gmail.com" class="company-mail">Contact</a>
         </div>
     </div>
     `
