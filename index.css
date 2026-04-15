@@ -96,7 +96,7 @@ img {
 }
 
 .nav-bar-header .nav-bar .nav-links:hover {
-    color: var(--accent-color);
+    color: var(--form-button-color);
 }
 
 /* Sección presentación general. */
@@ -423,7 +423,7 @@ section.presentation {
 
 .contact-form {
     width: 28rem;
-    background-color: var(--background-dark-color);
+    background-color: transparent;
     padding: 1.25rem;
     border-radius: 1rem;
     display: flex;
